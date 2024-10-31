@@ -329,7 +329,7 @@ Tabxax:AddToggle({
 
 
 -- Scripts Tab for additional functionalities.
-local Tabonx= Window:MakeTab({Name= "Scripts", Icon= "rbxassetid://4998267442", PremiumOnly= false})
+local Tabonx= Window:MakeTab({Name= "Scripts", Icon= "rbxassetid://11348590105", PremiumOnly= false})
 
 local camera = game.Workspace.CurrentCamera
 
@@ -345,10 +345,10 @@ Tabonx:AddSlider({
 })
 
 Tabonx:AddButton({
-    Name = "Load Infinite Yield",
+    Name = "Load Moon Yield!!",
     Callback = function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
-        print("Infinite Yield loaded successfully!")
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/pkplaysrblx/moon-yield/refs/heads/main/script.lua"))()
+        print("MIY loaded successfully!")
     end
 })
 
@@ -409,4 +409,26 @@ Tabonx:AddToggle({
             end 
         end 
     end 
+})
+
+local TabMOM = Window:MakeTab({
+    Name = "Credits",
+    Icon = "rbxassetid://5680175192",
+    PremiumOnly = false
+})
+
+TabMOM:AddParagraph("creds:", "swqss main, joke.xx alt on discord")
+
+TabMOM:AddButton({
+    Name = "Copy discord in clipboard",
+    Callback = function()
+        local starterGui = Services.StarterGui
+        setclipboard([[https://discord.gg/2YVa83gCV2]])
+        starterGui:SetCore("SendNotification", {
+            Title = "Copied!",
+            Text = "Copied Discord link in clipboard!",
+            Duration = 5
+        })
+        print("Copied successfully!")
+    end
 })
