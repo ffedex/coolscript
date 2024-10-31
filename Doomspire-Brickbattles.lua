@@ -419,16 +419,15 @@ local TabMOM = Window:MakeTab({
 
 TabMOM:AddParagraph("creds:", "swqss main, joke.xx alt on discord")
 
-TabMOM:AddButton({
-    Name = "Copy discord in clipboard",
+Tabonx:AddButton({
+    Name = "Copy Discord Link",
     Callback = function()
-        local starterGui = Services.StarterGui
-        setclipboard([[https://discord.gg/2YVa83gCV2]])
-        starterGui:SetCore("SendNotification", {
-            Title = "Copied!",
-            Text = "Copied Discord link in clipboard!",
-            Duration = 5
+        setclipboard("https://discord.gg/2YVa83gCV2") -- Copies the URL to the clipboard
+        OrionLib:MakeNotification({
+            Name = "Copied!",
+            Content = "Discord link copied to clipboard.",
+            Image = "rbxassetid://4483345998",
+            Time = 5
         })
-        print("Copied successfully!")
     end
 })
